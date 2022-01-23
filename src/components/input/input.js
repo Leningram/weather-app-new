@@ -1,10 +1,12 @@
 import React from "react";
-import './input.scss'
+import AlertMessage from "../alert-message/alert-message";
+import "./input.scss";
 
-const Input = ({ onChange, className, value, placeholder }) => {
+const Input = ({ onChange, className, value, placeholder, error }) => {
     return (
-        <div className={className ? className : ""}>
+        <div className={`input-container ${className ? className : ""}`}>
             <input className="input" placeholder={placeholder} type="text" value={value} onChange={onChange} />
+            {error && <AlertMessage message={error} />}
         </div>
     );
 };

@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.alert-message {
+    &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: $fontSmall;
+        gap: 8px;
+        
+        svg  {
+            width: 24px;
+            fill: $UIOrange;
+        }
+    }
+}

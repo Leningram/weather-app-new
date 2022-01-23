@@ -18,7 +18,7 @@ export default class WeatherService {
                 throw new Error(tryGetCurrentWeather.data.errors[0]);
             }
         } catch (error) {
-            throw new Error("Не удалось получить данные о погоде");
+            throw new Error("Не удалось найти");
         }
     }
 }
