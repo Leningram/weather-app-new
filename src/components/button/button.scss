@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.button {
+    min-width: 214px;
+    outline: none;
+    border: none;
+    background-color: $UIOrange;
+    color: $PureWhite;
+    padding: 15px 40px;
+    border-radius: 22px;
+    cursor: pointer;
+
+    font-size: $fontMiddle;
+
+    &:hover {
+        background-color: $UIOrangeHover;
+    }
+}
