@@ -3,6 +3,7 @@ import './search-form.scss'
 import ApiService from "../../services";
 import Button from "../button/button";
 import Input from "../input/input";
+import WeatherIcon from "../weather-icon/weather-icon";
 
 const SearchForm = ({ className }) => {
     const [query, setQuery] = useState("");
@@ -35,6 +36,7 @@ const SearchForm = ({ className }) => {
                 <Button title="Найти" />
             </form>
             <div>{weather && <p>{Math.round(weather.main.temp)}°C</p>}</div>
+            {weather && <WeatherIcon weather={weather.weather[0].description} />}
         </div>
     );
 };
