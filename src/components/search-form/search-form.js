@@ -4,8 +4,12 @@ import ApiService from "../../services";
 import Button from "../button/button";
 import Input from "../input/input";
 import WeatherIcon from "../weather-icon/weather-icon";
+import { useDispatch } from "react-redux";
+import { setWeatherType } from "../../store/options";
 
 const SearchForm = ({ className }) => {
+    const dispatch = useDispatch()
+
     const [query, setQuery] = useState("");
     const [weather, setWeather] = useState(null);
     const [errorMessage, setErrorMessage] =useState("")
@@ -19,6 +23,7 @@ const SearchForm = ({ className }) => {
             ApiService.weather.getCurrentWeatehr(query).then((result) => {
                 setErrorMessage("")    
                 setWeather(result)
+                dispatch(setWeatherType(result.weather[0].id))
             }).catch(error => setErrorMessage(error.message));
         }
     };

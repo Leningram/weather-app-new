@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {formatWeatherType} from '../../utils/format-weather-type'
 
 export const options = createSlice({
     name: "options",
     initialState: {
-        favouriteLocations: []
+        favouriteLocations: [],
+        weatherType: "",
     },
     reducers: {
         addToFavourite: (state, action) => {
@@ -11,8 +13,11 @@ export const options = createSlice({
                 state.favouriteLocations.indexOf(action.payload) === -1
                     ? [...state.favouriteLocations, action.payload]
                     : state.favouriteLocations;
+        },
+        setWeatherType: (state, action) => {
+            state.weatherType = formatWeatherType(action.payload)
         }
     }
 });
 
-export const {addToFavourite} = options.actions
+export const {addToFavourite, setWeatherType} = options.actions

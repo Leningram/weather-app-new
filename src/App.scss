@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   padding-top: 150px;
+  height: 100%;
+  background-size: cover;
+  transition: all 1s ease;
 }
 
 .App-logo {
@@ -38,4 +41,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.thunder {
+background-image: url('./assets/images/thunder.jpg');
+}
+
+.drizzle {
+background-image: url('./assets/images/snow.jpg');
+}
+
+.rain {
+background-image: url('./assets/images/rain-autumn.jpg');
+}
+
+.heavy-rain {
+background-image: url('./assets/images/heavy-rain.jpg');
+}
+
+.snow {
+background-image: url('./assets/images/snow.jpg');
+}
+
+.heavy-snow {
+background-image: url('./assets/images/snow.jpg');
+}
+
+.fog {
+background-image: url('./assets/images/snow.jpg');
+}
+
+.sunny {
+background-image: url('./assets/images/sunny.jpg');
+}
+
+.clouds {
+background-image: url('./assets/images/snow.jpg');
 }
